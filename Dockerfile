@@ -2,8 +2,9 @@ FROM python:3.10.4-slim-buster
 # Add a new user "john" with user id 8877
 RUN useradd -u 10001 john
 # Change to non-root privilege
-USER 10001
+
 RUN apt-get update && apt-get upgrade -y
+USER 10001
 RUN apt-get install git curl python3-pip ffmpeg -y
 RUN apt-get -y install git
 RUN apt-get install -y wget python3-pip curl bash neofetch ffmpeg software-properties-common
