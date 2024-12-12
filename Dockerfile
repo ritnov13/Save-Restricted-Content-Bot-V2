@@ -1,6 +1,6 @@
 FROM python:3.10.4-slim-buster
 # Add a new user "john" with user id 8877
-RUN useradd -u 8877 john
+RUN useradd -u 10001 john
 # Change to non-root privilege
 USER john
 RUN apt update && apt upgrade -y
