@@ -1,4 +1,8 @@
 FROM python:3.10.4-slim-buster
+# Add a new user "john" with user id 8877
+RUN useradd -u 8877 john
+# Change to non-root privilege
+USER john
 RUN apt update && apt upgrade -y
 RUN apt-get install git curl python3-pip ffmpeg -y
 RUN apt-get -y install git
