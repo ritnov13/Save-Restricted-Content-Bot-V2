@@ -4,7 +4,7 @@ RUN useradd -u 10001 john
 # Change to non-root privilege
 USER root
 USER 10001
-RUN apt update && apt upgrade -y
+RUN sudo apt update && apt upgrade -y
 RUN apt-get install git curl python3-pip ffmpeg -y
 RUN apt-get -y install git
 RUN apt-get install -y wget python3-pip curl bash neofetch ffmpeg software-properties-common
